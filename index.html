@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>盒子居中三种方法</title>
+		<style type="text/css">
+			*{padding: 0;margin: 0;}
+			.bigbox1,.bigbox2,.bigbox3{
+				width: 100%;
+				height: 300px;
+				margin-top: 20px;
+				border-bottom: 1px solid #ccc;
+			}
+			h2{
+				margin-top: 20px;
+			}
+			p{
+				margin: 10px;
+			}
+			.bigbox1 .box1{
+				width: 200px;
+				height: 200px;
+				background-color: pink;
+				margin: 0 auto;
+			}
+			
+			.bigbox2{
+				position: relative
+			}
+			.bigbox2 .box2{
+				width: 200px;
+				height: 200px;
+				background-color: skyblue;
+				position: absolute;
+				left: 50%;
+				margin-left: -100px;
+			}
+			
+			.bigbox3{
+				position: relative;
+			}
+			.bigbox3 .box3{
+				width: 200px;
+				height: 200px;
+				background-color: lightseagreen;
+				position: absolute;
+				left: 50%;
+				transform: translate(-50%);
+			}
+		</style>
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	</head>
+	<body>
+		<div class="bigbox1">
+			<h2>1.常规方法</h2>
+			<p>固定宽高，margin:0 auto;</p>
+			<div class="box1">常规方法</div>			
+		</div>
+		
+		<div class="bigbox2">
+			<h2>2.奇淫技巧</h2>
+			<p>利用定位，子绝父相，固定宽度，left:50%;margin:-宽度/2;</p>
+			<div class="box2">奇淫技巧</div>			
+		</div>
+		
+		<div class="bigbox3">
+			<h2>3.奇淫技巧升级版</h2>
+			<p>利用定位，子绝父相，无需知道宽度是多少更为实用！left:50%;transfrom:translate(-50%);</p>
+			<div class="box3">奇淫技巧升级版</div>			
+		</div>
+		
+		<h2>作者：程志辉</h2>
+		<p>原文地址：<strong><a href="https://www.qqzmly.com/archives/1642">https://www.qqzmly.com/archives/1642</a></strong></p>
+	</body>
+</html>
